@@ -1,2 +1,3 @@
 # SQL_Tutorial
 A brief collection of SQL samples to guide us through the most used SQL commands, hope it might help you as it help me :)
+It's important to clarify that I AM NOT THE CREATOR OF THIS TUTORIAL, I just find it helpful and useful to save it here just to practice and to share with others, if you are interested in see the creator here is a link to his Youtube chanel: https://www.youtube.com/watch?v=ymyFNYe8PDg his name is Baraa Kathid Salkini and his is from Germany, I cannot take it credit for something that I'm just sharing, btw if Baraa is reading this thank you very much for this content ;)
