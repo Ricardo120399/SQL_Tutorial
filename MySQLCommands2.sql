@@ -103,3 +103,5 @@ SELECT
 FROM customers AS c
 RIGHT JOIN orders AS o
 ON c.customer_id = o.customer_id
+/* Avoid using full joins
+It is harmful and causes performance problems */

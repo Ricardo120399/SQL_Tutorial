@@ -97,4 +97,5 @@ FROM customers AS c
 FULL JOIN orders AS o
 ON c.customer_id = o.customer_id 
 ORDER BY quantity ASC
-
+/* Avoid using full joins
+It is harmful and causes performance problems */
