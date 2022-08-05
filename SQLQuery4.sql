@@ -77,3 +77,9 @@ or whose score is less than 400 */
 SELECT *
 FROM Customers
 WHERE country = 'Germany' OR score < 400
+
+/* Find all customers whose score is not
+less than 400 */
+SELECT *
+FROM customers
+WHERE NOT score < 400
