@@ -42,3 +42,8 @@ contains r in 3rd position */
 SELECT *
 FROM Customers
 Where first_name LIKE '__r%'
+
+-- SQL Aliases --
+SELECT
+	c.customer_id AS cid
+from Customers AS c
