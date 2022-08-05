@@ -47,3 +47,54 @@ Where first_name LIKE '__r%'
 SELECT
 	c.customer_id AS cid
 from Customers AS c
+
+/* List customer ID, first name, Order ID, quantity.
+Exclude the customers who have not placed any orders */
+SELECT
+	c.customer_id,
+	c.first_name,
+	o.order_id,
+	o.quantity
+FROM customers AS c
+INNER JOIN orders AS o
+ON c.customer_id = o.customer_id 
+ORDER BY quantity ASC
+
+
+/* List customer ID, first name, Order ID, quantity.
+Include the customers who have not placed any orders */
+SELECT
+	c.customer_id,
+	c.first_name,
+	o.order_id,
+	o.quantity
+FROM customers AS c
+LEFT JOIN orders AS o
+ON c.customer_id = o.customer_id 
+ORDER BY quantity ASC
+
+/* List customer ID, first name, Order ID, quantity.
+Include all orders, regardless of whether there is a
+matching customer */
+SELECT
+	c.customer_id,
+	c.first_name,
+	o.order_id,
+	o.quantity
+FROM customers AS c
+RIGHT JOIN orders AS o
+ON c.customer_id = o.customer_id 
+ORDER BY quantity ASC
+
+/* List customer ID, first name, Order ID, quantity.
+Include everything! All customers and all orders */
+SELECT
+	c.customer_id,
+	c.first_name,
+	o.order_id,
+	o.quantity
+FROM customers AS c
+FULL JOIN orders AS o
+ON c.customer_id = o.customer_id 
+ORDER BY quantity ASC
+
