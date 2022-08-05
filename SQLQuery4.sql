@@ -70,5 +70,10 @@ WHERE country <> 'Germany'
 and whose score is less than 400 */
 SELECT *
 FROM Customers
-WHERE country = 'Germany'
-AND score < 400
+WHERE country = 'Germany' AND score < 400
+
+/* Find all customers who come from Germany
+or whose score is less than 400 */
+SELECT *
+FROM Customers
+WHERE country = 'Germany' OR score < 400
