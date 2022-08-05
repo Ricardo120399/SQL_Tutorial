@@ -8,7 +8,7 @@ CREATE TABLE Customers(
 	first_name	VARCHAR(50) NOT NULL,
 	last_name	VARCHAR(50) NOT NULL,
 	country		VARCHAR(50) NULL,
-	score		INT		NULL
+	score		INT			NULL
 );
 
 --Insert customers data--
@@ -21,9 +21,9 @@ INSERT INTO Customers VALUES('Peter','Franken','USA', NULL);
 --Orders table creation--
 CREATE TABLE Orders(
 	order_id	INT IDENTITY(1,1) PRIMARY KEY,
-	customer_id	INT NOT NULL,
+	customer_id	INT  NOT NULL,
 	order_date	DATE NULL,
-	quantity    INT NULL
+	quantity    INT  NULL
 );
 
 --Insert orders data--
