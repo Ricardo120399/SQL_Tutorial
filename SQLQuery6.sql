@@ -18,3 +18,15 @@ FROM Customers
 /* Find the total quantity of all orders */
 SELECT SUM(quantity) AS sum_quantity
 FROM Orders
+
+/* Find the average score of all customers */
+SELECT AVG(score) AS avg_score
+FROM Customers
+
+-- Find the highest score of all customers --
+SELECT MAX(score) AS max_score
+FROM Customers
+
+-- Find the lowest score of all customers --
+SELECT MIN(score) AS low_score
+FROM customers
