@@ -26,3 +26,19 @@ FROM Customers
 -- Find the lowest score of all customers --
 SELECT MIN(score) AS low_score
 FROM customers
+
+-- Find the total number of customers for each country --
+SELECT
+	COUNT(*) AS total_customers,
+	country
+FROM Customers
+GROUP BY country
+
+-- Find the highest score of customers for each country --
+-- Find the highest score of customers for each country --
+SELECT
+	MAX(score) AS max_score,
+	country
+FROM Customers
+GROUP BY country
+ORDER BY max_score DESC
