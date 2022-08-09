@@ -42,3 +42,14 @@ SELECT
 FROM Customers
 GROUP BY country
 ORDER BY max_score DESC
+
+/* Find the total number of customers
+for each country and only include countries
+that have more than 1 customer */
+SELECT 
+	COUNT(*) AS total_customers,
+	country
+FROM Customers
+WHERE country != 'USA'
+GROUP BY country
+HAVING COUNT(*) > 1
