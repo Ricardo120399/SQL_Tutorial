@@ -53,3 +53,21 @@ FROM Customers
 WHERE country != 'USA'
 GROUP BY country
 HAVING COUNT(*) > 1
+
+/* Find all orders place from customers whose
+score higher than 500 using the customers ID */
+SELECT *
+FROM Orders
+WHERE customer_id IN (	
+	SELECT customer_id
+	FROM Customers
+	WHERE score > 500
+)
+
+SELECT * 
+FROM orders AS o 
+WHERE EXISTS (
+ SELECT 1 
+ FROM customers AS c
+ WHERE c.customer_id = o.customer_id
+ AND score > 500)
